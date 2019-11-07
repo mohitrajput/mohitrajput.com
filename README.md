@@ -1,2 +1,0 @@
-# mohitrajput.com
-Personal Website
