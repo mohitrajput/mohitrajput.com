@@ -1,0 +1,106 @@
+/* Import */
+@import './reset';
+@import './fonts';
+
+
+// Sass Variables
+@import './variables';
+
+// Site Globals
+@import './global';
+
+// Atoms
+
+
+// Molecules
+
+
+// Organism
+@import './Organism/header.scss';
+
+// Templates
+
+
+// Pages
+
+
+
+.hero-section-wrapper {
+    display: grid;
+    margin: auto;
+    // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 100px 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    .social-account-wrapper {
+        align-self: end;
+        ul { list-style: none; }
+        li {
+            line-height: 120px;
+            transform: rotate(-90deg) translateY(calc(-50% + 5px));
+            transform-origin: top left;
+            &:last-child { line-height: 1; }
+            a {
+                font-size: 14px;
+                letter-spacing: 1px;
+                color: rgba($text-color, .5);
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: all .3s;
+                &:hover {
+                    color: rgba($text-color, 1);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .picture-wrapper { 
+        justify-self: end; 
+        img { max-width: 535px; }
+    }
+    .text-wrapper {
+        justify-self: start;
+        margin-left: -40px;
+        font-family: var(--primary-font);
+        font-weight: 600;
+        color: var(--text-color);
+        h1 {
+            font-size: 4.5rem;
+        }
+        h3 {
+            margin-top: 30px;
+            font-size: 2.25rem;
+            color: rgba($text-color, .5);
+        }
+    }
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "copyright mail";
+    align-content: flex-end;
+    padding: 15px 0;
+    .copyright {
+        align-self: center;
+        font-size: 0.75rem;
+        color: rgba($text-color, .5);
+    }
+    .contact-popup {
+        justify-self: end;
+        .mail-sign {
+            display: inline-block;
+            padding: 12px;
+            line-height: 0;
+            background: #111d43;
+            border-radius: 50%;
+            box-shadow: 0 3px 4px rgba(17, 29, 67,0.25);
+            svg {
+                width: 22px;
+                height: 22px;
+                fill: #fff;
+            }
+        }
+    }
+}
+

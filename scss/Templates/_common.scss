@@ -1,0 +1,16 @@
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    margin: auto;
+    padding: 40px 20px 0;
+    max-width: 1400px;
+    min-height: 100vh;
+}
+
+main {
+    grid-area: main;
+}
+

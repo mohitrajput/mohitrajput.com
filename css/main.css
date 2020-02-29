@@ -1,0 +1,255 @@
+/* Import */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+/* Metropolis Font */
+@font-face {
+  font-family: "Metropolis";
+  src: url("Metropolis-Regular.eot");
+  src: local("Metropolis Regular"), local("Metropolis-Regular"), url("../fonts/WOFF2/Metropolis-Regular.woff2") format("woff2"), url("../fonts/WOFF/Metropolis-Regular.woff") format("woff"), url("../fonts/EOT/Metropolis-Regular.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+:root {
+  /* Colors */
+  --primary-color: $primary-color;
+  --text-color: $text-color;
+  /* Typography */
+  --primary-font: "Metropolis", sans-serif;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "logo navigation mobile-menu";
+  align-content: flex-start;
+  justify-items: center;
+  align-items: center;
+}
+header .logo {
+  grid-area: logo;
+  z-index: 99;
+}
+header nav {
+  grid-area: navigation;
+  justify-self: end;
+}
+header nav a {
+  padding: 0 1.125rem;
+  color: #111d43;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+header nav a:hover {
+  color: #ff5548;
+}
+header .ham-menu {
+  grid-area: mobile-menu;
+  justify-self: end;
+  display: none;
+  position: relative;
+  width: 60px;
+  height: 45px;
+  transform: rotate(0deg) scale(0.75);
+  transform-origin: right center;
+  transition: 0.5s ease-in-out;
+  z-index: 99;
+  cursor: pointer;
+}
+header .ham-menu span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #111D43;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+header .ham-menu span:nth-child(1) {
+  top: 0px;
+}
+header .ham-menu span:nth-child(2), header .ham-menu span:nth-child(3) {
+  width: 35px;
+  top: 18px;
+  right: 0;
+  left: auto;
+}
+header .ham-menu span:nth-child(4) {
+  top: 36px;
+}
+header.open .ham-menu span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+header.open .ham-menu span:nth-child(2) {
+  transform: rotate(45deg);
+}
+header.open .ham-menu span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+header.open .ham-menu span:nth-child(2), header.open .ham-menu span:nth-child(3) {
+  width: 100%;
+}
+header.open .ham-menu span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+@media screen and (max-width: 767px) {
+  header .logo {
+    transform: scale(0.75);
+    transform-origin: left center;
+  }
+  header nav {
+    display: none;
+  }
+  header .ham-menu {
+    display: grid;
+  }
+}
+
+.hero-section-wrapper {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 100px 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.hero-section-wrapper .social-account-wrapper {
+  align-self: end;
+}
+.hero-section-wrapper .social-account-wrapper ul {
+  list-style: none;
+}
+.hero-section-wrapper .social-account-wrapper li {
+  line-height: 120px;
+  transform: rotate(-90deg) translateY(calc(-50% + 5px));
+  transform-origin: top left;
+}
+.hero-section-wrapper .social-account-wrapper li:last-child {
+  line-height: 1;
+}
+.hero-section-wrapper .social-account-wrapper li a {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(17, 29, 67, 0.5);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.hero-section-wrapper .social-account-wrapper li a:hover {
+  color: #111d43;
+  text-decoration: underline;
+}
+.hero-section-wrapper .picture-wrapper {
+  justify-self: end;
+}
+.hero-section-wrapper .picture-wrapper img {
+  max-width: 535px;
+}
+.hero-section-wrapper .text-wrapper {
+  justify-self: start;
+  margin-left: -40px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  color: var(--text-color);
+}
+.hero-section-wrapper .text-wrapper h1 {
+  font-size: 4.5rem;
+}
+.hero-section-wrapper .text-wrapper h3 {
+  margin-top: 30px;
+  font-size: 2.25rem;
+  color: rgba(17, 29, 67, 0.5);
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: "copyright mail";
+  align-content: flex-end;
+  padding: 15px 0;
+}
+footer .copyright {
+  align-self: center;
+  font-size: 0.75rem;
+  color: rgba(17, 29, 67, 0.5);
+}
+footer .contact-popup {
+  justify-self: end;
+}
+footer .contact-popup .mail-sign {
+  display: inline-block;
+  padding: 12px;
+  line-height: 0;
+  background: #111d43;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(17, 29, 67, 0.25);
+}
+footer .contact-popup .mail-sign svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

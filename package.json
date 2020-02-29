@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "sass": "^1.24.1"
+  },
+  "name": "mohitrajput-com",
+  "version": "1.0.0",
+  "description": "Personal website of Mohit Rajput",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
+    "sass:watch": "sass --watch scss:css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitrajput/mohitrajput.com.git"
+  },
+  "keywords": [
+    "Personal-Website"
+  ],
+  "author": "Mohit Rajput <sayhi@mohitrajput.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitrajput/mohitrajput.com/issues"
+  },
+  "homepage": "https://github.com/mohitrajput/mohitrajput.com#readme"
+}
